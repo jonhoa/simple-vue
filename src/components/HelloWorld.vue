@@ -36,6 +36,14 @@ export default {
     Location: <input type="text" v-model="location" />
     <button v-on:click="toggleInfo">Info</button>
     <button v-on:click="getData">Data</button>
+    <br />
+    <h1>All Posts</h1>
+    <div v-for="post in posts" v-bind:key="post.id">
+      <p>Title: {{ post.title }}</p>
+      <p>Body: {{ post.body }}</p>
+      <p><img v-bind:src="post.image" /></p>
+      <hr />
+    </div>
     <p>{{ posts }}</p>
   </div>
 </template>
