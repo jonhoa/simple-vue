@@ -7,7 +7,8 @@ export default {
   data: function() {
     return {
       message: "Welcome to Vue.js!",
-      location: "Bombolulu"
+      location: "Bombolulu",
+      posts: []
     };
   },
   created: function() {},
@@ -16,6 +17,7 @@ export default {
       console.log("fetch from axios");
       axios.get("http://localhost:3000/posts").then(response =>{
         console.log(response.data);
+        this.posts = response.data
       })
     },
     toggleInfo: function() {
@@ -34,6 +36,7 @@ export default {
     Location: <input type="text" v-model="location" />
     <button v-on:click="toggleInfo">Info</button>
     <button v-on:click="getData">Data</button>
+    <p>{{ posts }}</p>
   </div>
 </template>
 
