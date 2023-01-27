@@ -10,7 +10,7 @@ export default {
       message: "Welcome to Vue.js!",
       location: "Bombolulu",
       posts: [],
-      newPosts: []
+      newPosts: {}
     };
   },
   created: function() {},
@@ -23,10 +23,9 @@ export default {
       })
     },
     submitData: function() {
-      console.log("post to database");
-      axios.post("http://localhost:3000/posts").then(response =>{
-        console.log(response.data);
-        this.posts = response.data
+      axios.post("http://localhost:3000/posts", this.newPosts).then(response =>{
+        console.log("post to database", response);
+        this.newPosts = {};
       })
     },
     toggleInfo: function() {
