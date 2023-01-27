@@ -22,6 +22,13 @@ export default {
         this.posts = response.data
       })
     },
+    submitData: function() {
+      console.log("post to database");
+      axios.post("http://localhost:3000/posts").then(response =>{
+        console.log(response.data);
+        this.posts = response.data
+      })
+    },
     toggleInfo: function() {
     console.log("do something")
   }
