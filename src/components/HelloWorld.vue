@@ -42,7 +42,8 @@ export default {
     <h1>Post Create</h1>
     <p>Fill up form data below</p>
     Title: <input type="text" v-model="newPosts.title" /> <br />
-    Body:<input type="text" v-model="newPosts.body" />
+    Body:<input type="text" v-model="newPosts.body" /><br />
+    <button v-on:click="submitData">Submit</button>
     <br />
     <h1>All Posts</h1>
     <div v-for="post in posts" v-bind:key="post.id">
