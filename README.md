@@ -1,5 +1,5 @@
 # simple-vue
-This is the front-end for the Rails Blog-api using Vue instead of React. 
+A project to test the functionality of Vue.Js .This is the front-end for the Rails Blog-api using Vue instead of React. 
 
 ## Project use
 Run Blog-api Rails Backend server
